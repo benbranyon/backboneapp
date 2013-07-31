@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Backbone Brews</title>
+		
+		<link href="css/bootstrap.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="header"><span class="title">Backbone Brews</span></div>
+		
+		<div class="container">
+			<div class="row">
+				<div id="content" class="span12">
+					<h2>Welcome to Backbone Brews</h2>
+					<p>This is an application displaying a list of my favorite micro brews.</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Templates -->
+		<script type="text/template" id="tpl-brew-list-item">
+			<a href='#brews/<%= id %>'><%= name %></a>
+		</script>
+		
+		<script type="text/template" id="tpl-brew-details">
+			<div class="form-left-col">
+				<label>Id:</label>
+				<input type="text" id="wineId" name="id" value="<%= id %>" disabled />
+				<label>Name:</label>
+				<input type="text" id="name" name="name" value="<%= name %>" required/>
+				<label>Grapes:</label>
+				<input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
+				<label>Country:</label>
+				<input type="text" id="country" name="country" value="<%= country %>"/>
+				<label>Region:</label>
+				<input type="text" id="region" name="region"  value="<%= region %>"/>
+				<label>Year:</label>
+				<input type="text" id="year" name="year"  value="<%= year %>"/>
+			</div>
+			<div class="form-right-col">
+				<img height="300" src="../pics/<%= picture %>"/>
+				<label>Notes:</label>
+				<textarea id="description" name="description"><%= description %></textarea>
+			</div>
+		</script>
+		
+		<script src="libs/jquery-1.7.2.min.js"></script>
+		<script src="libs/underscore-min.js"></script>
+		<script src="libs/backbone.js"></script>
+		<script src="libs/bootstrap.js"></script>
+		<script src="js/main.js"></script> 
+	</body>
+</html>
